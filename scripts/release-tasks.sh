@@ -24,5 +24,5 @@ else
 
 fi
 
-yarn install
-./node_modules/.bin/encore production --progress
+#yarn install
+#./node_modules/.bin/encore production --progress

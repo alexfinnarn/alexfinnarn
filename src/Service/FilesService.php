@@ -17,7 +17,7 @@ class FilesService
 
     public function parseMarkdown(false|string $contents)
     {
-        $this->parser->convertToHtml($contents);
+        return $this->parser->convertToHtml($contents);
     }
 
     public function parseJSON(string $fileName): mixed

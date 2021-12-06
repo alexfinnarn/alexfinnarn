@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-xl;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-bold;
+    }
+
+    h1 {
+        @apply text-5xl py-5;
+    }
+
+    h2 {
+        @apply text-4xl py-4;
+    }
+
+    ul, p {
+        @apply py-4;
+    }
+}
+
+@layer components {
+    .posts-content img {
+        @apply mx-auto ;
+    }
+
+    .header-icons {
+        @apply fill-current text-white hover:text-gray-200 transform hover:scale-110;
+        height: 42px;
+    }
+}
+
+

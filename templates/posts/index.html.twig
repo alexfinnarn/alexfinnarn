@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} My Thoughts | Finn's Web{% endblock %}
+
+{% block body %}
+    <div class="md:max-w-screen-lg mx-auto p-4">
+        <div class="border-2 p-2 bg-gray-300 rounded flex flex-col md:flex-row">
+            <div>
+                <h1>Observe Alex Finnarn</h1>
+                <p>
+                    The man himself alone.
+                    With dumb aplomb he sits at home.
+                    He waits and thumps his foot a bit.
+                    And finishes his rhyme with dome.
+                </p>
+            </div>
+            <div>
+                <img src="/assets/profile.jpeg" alt="Mr. Alex Finnarn" class="">
+            </div>
+        </div>
+        <div class="w-full pb-3 border-2 p-2">
+            <a href={{ "/posts/#{first_post.slug}" }}> {{ first_post.title }}</a>
+        </div>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for post in rest_posts %}
+                <li class="border-2 p-2">
+                    <a href={{ "/posts/#{post.slug}" }}> {{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

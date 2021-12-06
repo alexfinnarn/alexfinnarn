@@ -25,4 +25,4 @@ else
 fi
 
 yarn install
-yarn build
+./node_modules/.bin/encore production --progress

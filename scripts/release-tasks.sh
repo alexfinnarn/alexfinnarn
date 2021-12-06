@@ -24,4 +24,5 @@ else
 
 fi
 
-npm run build
+yarn install
+yarn build

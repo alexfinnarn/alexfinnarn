@@ -24,4 +24,4 @@ else
 
 fi
 
-yarn build
+npm run build

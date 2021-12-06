@@ -23,3 +23,5 @@ else
 #  curl https://digital-dash-stage-adv-cu.herokuapp.com/api/review-apps/${HEROKU_APP_NAME}/${HEROKU_BRANCH}
 
 fi
+
+yarn build

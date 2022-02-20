@@ -7,8 +7,6 @@
         <h1>{{ meta.title }}</h1>
         {% if meta.date_published != 'DRAFT' %}
           <span class="text-sm font-bold pl-2">Published: {{ meta.date_published }}</span>
-        {% endif %}
-        {% if meta.date_updated != 'DRAFT' %}
           <span class="text-sm inline-block ml-4 italic">Updated: {{ meta.date_updated }}</span>
         {% endif %}
         <div class="posts-content">

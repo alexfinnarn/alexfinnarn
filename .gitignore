@@ -20,6 +20,7 @@
 ###< phpunit/phpunit ###
 
 .idea
+.DS_Store
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/

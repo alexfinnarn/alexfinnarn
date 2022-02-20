@@ -19,9 +19,18 @@
         @apply text-4xl py-4;
     }
 
-    ul, p {
+    ul, p, pre {
         @apply py-4;
     }
+
+    ul {
+        @apply pl-6;
+    }
+
+    li {
+        list-style: circle;
+    }
+
 }
 
 @layer components {
@@ -32,6 +41,31 @@
     .header-icons {
         @apply fill-current text-white hover:text-gray-200 transform hover:scale-110;
         height: 42px;
+    }
+
+    pre {
+        /*left: 50%;*/
+        margin-left: -30px;
+        margin-right: -30px;
+        /*max-width: 600px;*/
+        position: relative;
+        /*right: 50%;*/
+        /*width: 600px;*/
+    }
+
+    @screen md {
+        pre {
+            /*left: 50%;*/
+            margin-left: -70px;
+            margin-right: -70px;
+            /*max-width: 600px;*/
+            /*right: 50%;*/
+            /*width: 600px;*/
+        }
+    }
+
+    code {
+        @apply rounded-2xl;
     }
 }
 

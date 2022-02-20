@@ -3,28 +3,33 @@
 {% block title %} My Thoughts | Finn's Web{% endblock %}
 
 {% block body %}
-    <div class="md:max-w-screen-lg mx-auto p-4">
-        <div class="border-2 p-2 bg-gray-300 rounded flex flex-col md:flex-row">
-            <div>
-                <h1>Observe Alex Finnarn</h1>
-                <p class="text-center">
-                    The man himself alone<br/>
-                    With dumb aplomb he sits at home.<br/>
-                    He waits and thumps his foot a bit.<br/>
-                    And finishes his rhyme with dome.
-                </p>
+    <div class="md:max-w-screen-3xl mx-auto p-4 grid grid-cols-1 gap-4">
+        <h1>Observe Alex Finnarn</h1>
+        <div class="border-2 p-2 rounded flex flex-col md:flex-row">
+            <div class="w-1/2 grid grid-cols-1 gap-2">
+                <a href={{ "/posts/#{first_post.slug}" }}>{{ first_post.title }}</a>
+                <span>{{ first_post.date_updated }}</span>
+                <img src="{{ first_post.hero_image.src }}" alt="{{ first_post.hero_image.alt }}">
+                <p>{{ first_post.summary }}</p>
+                <a href={{ "/posts/#{first_post.slug}" }}>Read more...</a>
             </div>
-            <div>
-                <img src="/assets/profile.jpeg" alt="Mr. Alex Finnarn" class="">
+            <div class="w-1/2">
+                <img src="/assets/unnamed.jpeg" alt="Mr. Alex Finnarn" class="rounded-full mx-auto">
+                <ul class="divide-y-2 space-y-3 w-1/2 mx-auto text-center">
+                    <li class="pt-2 list-none">Foo</li>
+                    <li class="pt-2 list-none">Foo</li>
+                    <li class="pt-2 list-none">Foo</li>
+                </ul>
             </div>
-        </div>
-        <div class="w-full pb-3 border-2 p-2">
-            <a href={{ "/posts/#{first_post.slug}" }}> {{ first_post.title }}</a>
         </div>
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
             {% for post in rest_posts %}
-                <li class="border-2 p-2">
+                <li class="border-2 p-2 grid grid-cols-1 gap-2">
                     <a href={{ "/posts/#{post.slug}" }}> {{ post.title }}</a>
+                    <span>{{ post.date_updated }}</span>
+                    <img src="{{ post.hero_image.src }}" alt="{{ post.hero_image.alt }}">
+                    <p>{{ first_post.summary }}</p>
+                    <a href={{ "/posts/#{post.slug}" }}>Read more...</a>
                 </li>
             {% endfor %}
         </ul>

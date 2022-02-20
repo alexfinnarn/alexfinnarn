@@ -177,6 +177,9 @@
     "psr/log": {
         "version": "2.0.0"
     },
+    "scrivo/highlight.php": {
+        "version": "v9.18.1.8"
+    },
     "sebastian/cli-parser": {
         "version": "1.0.1"
     },
@@ -236,6 +239,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "spatie/commonmark-highlighter": {
+        "version": "3.0.0"
     },
     "symfony/apache-pack": {
         "version": "1.0",

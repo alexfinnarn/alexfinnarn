@@ -1,72 +1,232 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
 
-@layer base {
-    body {
-        @apply text-xl;
-    }
-
-    h1, h2, h3, h4 {
-        @apply font-bold;
-    }
-
-    h1 {
-        @apply text-5xl py-5;
-    }
-
-    h2 {
-        @apply text-4xl py-4;
-    }
-
-    ul, p, pre {
-        @apply py-4;
-    }
-
-    ul {
-        @apply pl-6;
-    }
-
-    li {
-        list-style: circle;
-    }
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+    line-height: 1;
+}
+menu, ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-@layer components {
-    .posts-content img {
-        @apply mx-auto ;
-    }
+/**/
+/* End reset.css */
+/**/
 
-    .header-icons {
-        @apply fill-current text-white hover:text-gray-200 transform hover:scale-110;
-        height: 42px;
-    }
 
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    flex-grow: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    padding: 0 20px;
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+ul, p, pre, h2 {
+    padding: 0 16px;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+li {
+    list-style: circle;
+}
+
+code {
+    border-radius: 8px;
+}
+
+pre {
+    margin-left: -30px;
+    margin-right: -30px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
     pre {
-        /*left: 50%;*/
-        margin-left: -30px;
-        margin-right: -30px;
-        /*max-width: 600px;*/
-        position: relative;
-        /*right: 50%;*/
-        /*width: 600px;*/
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+}
+
+/**/
+/* Main HTML elements */
+/**/
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.pl-3 {
+    padding-left: 0.75rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-baseline {
+    vertical-align: baseline;
+}
+
+@media (min-width: 768px) {
+    .md-max-w-screen-lg {
+        max-width: 1023px;
     }
 
-    @screen md {
-        pre {
-            /*left: 50%;*/
-            margin-left: -70px;
-            margin-right: -70px;
-            /*max-width: 600px;*/
-            /*right: 50%;*/
-            /*width: 600px;*/
-        }
+    .md-max-w-screen-2xl {
+        max-width: 1536px;
     }
+}
 
-    code {
-        @apply rounded-2xl;
+/**/
+/* End Tailwind replacements */
+/**/
+
+.header-links {
+    font-size: 24px;
+    vertical-align: baseline;
+}
+
+@media (min-width: 768px) {
+    .header-links {
+        font-size: 20px;
     }
+}
+
+.header-icons a {
+    margin: 0 8px;
+}
+
+.header-icon {
+    color: #FFFFFF;
+    height: 42px;
+    scale: 100;
+    fill: currentColor;
+}
+
+.header-icon:hover {
+    color: #999999;
+    scale: 110;
+}
+
+/**/
+/* Posts content type. */
+/**/
+
+.posts-index-container {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+
+
+.posts-header {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .posts-header {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.first-post {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.profile-section, .first-post {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .first-post, .profile-section {
+        width: 50%;
+    }
+}
+
+.posts-content img {
+    margin: 0 auto;
 }
 
 

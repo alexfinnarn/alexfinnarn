@@ -3,22 +3,27 @@
 {% block title %} My Thoughts | Finn's Web{% endblock %}
 
 {% block body %}
-    <div class="md:max-w-screen-3xl mx-auto p-4 grid grid-cols-1 gap-4">
-        <h1>Observe Alex Finnarn</h1>
-        <div class="border-2 p-2 rounded flex flex-col md:flex-row">
-            <div class="w-1/2 grid grid-cols-1 gap-2">
-                <a href={{ "/posts/#{first_post.slug}" }}>{{ first_post.title }}</a>
+    <div class="md-max-w-screen-2xl mx-auto posts-index-container">
+        <div class="posts-header">
+            <div class="first-post">
+                <a class="text-3xl" href={{ "/posts/#{first_post.slug}" }}>{{ first_post.title }}</a>
                 <span>{{ first_post.date_updated }}</span>
                 <img src="{{ first_post.hero_image.src }}" alt="{{ first_post.hero_image.alt }}">
                 <p>{{ first_post.summary }}</p>
                 <a href={{ "/posts/#{first_post.slug}" }}>Read more...</a>
             </div>
-            <div class="w-1/2">
+            <div class="profile-section">
                 <img src="/assets/unnamed.jpeg" alt="Mr. Alex Finnarn" class="rounded-full mx-auto">
                 <ul class="divide-y-2 space-y-3 w-1/2 mx-auto text-center">
-                    <li class="pt-2 list-none">Foo</li>
-                    <li class="pt-2 list-none">Foo</li>
-                    <li class="pt-2 list-none">Foo</li>
+                    <li class="pt-2 list-none">
+                        <h1 class="text-2xl">Alex Finnarn</h1>
+                    </li>
+                    <li class="pt-2 list-none">
+                        Web Developer | Software Engineer | Writer
+                    </li>
+                    <li class="pt-2 list-none">
+
+                    </li>
                 </ul>
             </div>
         </div>

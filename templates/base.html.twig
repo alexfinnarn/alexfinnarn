@@ -12,14 +12,14 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body class="min-h-screen flex flex-col">
-        <header class="bg-black text-white p-4 flex-grow-0">
+    <body>
+        <header>
             {{ include('_header.html.twig') }}
         </header>
-        <main class="flex-grow">
+        <main>
             {% block body %}{% endblock %}
         </main>
-        <footer class="bg-black p-4 flex-grow-0">
+        <footer>
             2021c
         </footer>
     </body>

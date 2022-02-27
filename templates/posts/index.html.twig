@@ -4,7 +4,6 @@
 
 {% block body %}
     <div class="md:max-w-screen-3xl mx-auto p-4 grid grid-cols-1 gap-4">
-        <h1>Observe Alex Finnarn</h1>
         <div class="border-2 p-2 rounded flex flex-col md:flex-row">
             <div class="w-1/2 grid grid-cols-1 gap-2">
                 <a href={{ "/posts/#{first_post.slug}" }}>{{ first_post.title }}</a>
@@ -16,7 +15,9 @@
             <div class="w-1/2">
                 <img src="/assets/unnamed.jpeg" alt="Mr. Alex Finnarn" class="rounded-full mx-auto">
                 <ul class="divide-y-2 space-y-3 w-1/2 mx-auto text-center">
-                    <li class="pt-2 list-none">Foo</li>
+                    <li class="pt-2 list-none">
+                        <h1 class="text-2xl">Alex Finnarn</h1>
+                    </li>
                     <li class="pt-2 list-none">Foo</li>
                     <li class="pt-2 list-none">Foo</li>
                 </ul>

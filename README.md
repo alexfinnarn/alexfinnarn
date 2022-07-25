@@ -5,6 +5,6 @@ I might as well list out my current ambitions so you can contact and keep me hon
 
 - Bringing HTML-over-the-wire (HOTwire) to more web platforms
 - Fixing the hiring process via my own methodlogy, app, and consulting
-- Providing a better conert-going experience through an open source project networking phones and speakers into
+- Providing a better concert-going experience through an open source project networking phones and speakers into
 an array of awesomeness
 
